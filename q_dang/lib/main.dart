@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-
-import 'Screen/home_screen.dart';
+import 'package:q_dang/Screen/main_screen.dart';
 
 void main() {
-  runApp(MaterialApp(
-    home: HomeScreen(),
+  runApp(const MaterialApp(
+    debugShowCheckedModeBanner: false,
+    home: MainScreen(),
   ));
 }
