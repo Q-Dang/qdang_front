@@ -10,12 +10,12 @@ class Welcome extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const Text('이미지 들어갈 자리'),
-          //Image.asset('asset/img/que.png'),
-          //이미지,
+          Image.asset(
+            'asset/img/que.png',
+            height: 30,
+          ),
           Text("$name님, 환영합니다!",
               textAlign: TextAlign.center,
               style: const TextStyle(

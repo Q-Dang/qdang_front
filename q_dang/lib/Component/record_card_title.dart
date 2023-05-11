@@ -13,6 +13,7 @@ class RecordCardTitle extends StatelessWidget {
         children: [
           SizedBox(
             width: 80,
+            height: 20,
             child: Container(
               color: mainColor,
               child: Text(
@@ -21,9 +22,6 @@ class RecordCardTitle extends StatelessWidget {
                 style: const TextStyle(color: Colors.white),
               ),
             ),
-          ),
-          Expanded(
-            child: Container(),
           ),
         ],
       ),

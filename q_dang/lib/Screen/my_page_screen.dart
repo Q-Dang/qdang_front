@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:q_dang/Component/ability_distribution.dart';
 import 'package:q_dang/Component/my_profile.dart';
 
 class MyPageScreen extends StatelessWidget {
@@ -14,7 +15,8 @@ class MyPageScreen extends StatelessWidget {
         SizedBox(
           child: Container(color: Color(0xFFD9D9D9)),
           height: 1,
-        )
+        ),
+        AbilityDistribution(name: '홍길동')
       ],
     );
   }

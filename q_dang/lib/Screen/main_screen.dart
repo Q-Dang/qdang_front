@@ -44,7 +44,7 @@ class _MainScreenState extends State<MainScreen> {
 
   PreferredSizeWidget selecAppBar() {
     if (_selectedIndex == 1) {
-      return MyPageAppBar();
+      return const MyPageAppBar();
     }
     return const MainAppBar();
   }

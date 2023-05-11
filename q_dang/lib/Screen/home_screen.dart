@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:q_dang/Component/new_game_button.dart';
 import 'package:q_dang/Component/record_card.dart';
 import 'package:q_dang/Component/welcome.dart';
@@ -15,22 +16,29 @@ class _HomeScreenState extends State<HomeScreen> {
   List<String> cardTest = ["패배", "패베", "승리", "승리", "패배"];
 
   @override
+  void initState() {
+    super.initState();
+
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
+  }
+
+  @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Column(
-          children: [
-            Expanded(
-                child: ListView(children: [
-              const Welcome(name: '홍길동'),
-              ...cardTest
-                  .map((e) => Expanded(child: RecordCard(res: e)))
-                  .toList(),
-            ])),
-            NewGameButton(onPressed: newGame)
-          ],
-        ),
-      ),
+          body: Column(
+        children: [
+          Welcome(name: '홍길동'),
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                children: cardTest.map((e) => RecordCard(res: e)).toList(),
+              ),
+            ),
+          ),
+          NewGameButton(onPressed: newGame),
+        ],
+      )),
     );
   }
 

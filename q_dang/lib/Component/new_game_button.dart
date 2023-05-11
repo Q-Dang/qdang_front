@@ -10,10 +10,10 @@ class NewGameButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
+        elevation: 50,
         backgroundColor: Colors.white,
         shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
       ),
-      onPressed: onPressed,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 10),
         child: Container(
@@ -32,6 +32,7 @@ class NewGameButton extends StatelessWidget {
           ),
         ),
       ),
+      onPressed: onPressed,
     );
   }
 }

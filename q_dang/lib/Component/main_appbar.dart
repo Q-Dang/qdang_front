@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:q_dang/Constant/colors.dart';
 
 class MainAppBar extends StatelessWidget with PreferredSizeWidget {
   const MainAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return AppBar(
-      title: const Center(
-        child: Text(
-          "큐당로고 들어갈 곳",
-          style: TextStyle(color: kprimaryColor),
-        ),
+      centerTitle: true,
+      title: Image.asset(
+        'asset/img/logo.png',
+        height: kToolbarHeight * 0.6,
       ),
       actions: [
         IconButton(

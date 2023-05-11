@@ -12,11 +12,10 @@ class MyProfile extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 10, horizontal: 16),
       child: Row(
         children: [
-          //Image.asset('myprofile'),
-          SizedBox(
-            width: 50,
+          Image.asset(
+            'asset/img/logo.png',
             height: 50,
-            child: Container(color: Colors.black),
+            width: 50,
           ),
           Expanded(
             child: Column(
