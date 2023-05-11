@@ -5,7 +5,6 @@ class MainAppBar extends StatelessWidget with PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
     return AppBar(
       centerTitle: true,
       title: Image.asset(

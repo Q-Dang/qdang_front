@@ -11,7 +11,6 @@ class NewGameScreen extends StatefulWidget {
 class _NewGameScreenState extends State<NewGameScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     SystemChrome.setPreferredOrientations(
         [DeviceOrientation.landscapeLeft, DeviceOrientation.landscapeRight]);
@@ -19,7 +18,6 @@ class _NewGameScreenState extends State<NewGameScreen> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     SystemChrome.setPreferredOrientations([]);
   }
