@@ -28,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
           body: Column(
         children: [
-          Welcome(name: '홍길동'),
+          const Welcome(name: '홍길동'),
           Expanded(
             child: SingleChildScrollView(
               child: Column(

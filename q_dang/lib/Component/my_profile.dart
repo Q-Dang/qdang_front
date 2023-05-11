@@ -4,12 +4,12 @@ import 'package:q_dang/Constant/colors.dart';
 class MyProfile extends StatelessWidget {
   final String name;
 
-  MyProfile({required this.name});
+  const MyProfile({super.key, required this.name});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 16),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
       child: Row(
         children: [
           Image.asset(
@@ -23,9 +23,10 @@ class MyProfile extends StatelessWidget {
               children: [
                 Text(
                   '$name님',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+                  style: const TextStyle(
+                      fontSize: 20, fontWeight: FontWeight.w700),
                 ),
-                Text(
+                const Text(
                   '모두 재밌는 당구해요~',
                   style: TextStyle(
                     fontSize: 10,
@@ -37,7 +38,7 @@ class MyProfile extends StatelessWidget {
           OutlinedButton(
               onPressed: () {},
               style: OutlinedButton.styleFrom(
-                side: BorderSide(
+                side: const BorderSide(
                   color: kprimaryColor,
                   width: 2,
                   style: BorderStyle.solid,
@@ -45,7 +46,7 @@ class MyProfile extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16)),
               ),
-              child: Text(
+              child: const Text(
                 '프로필 수정',
                 style: TextStyle(
                     color: kprimaryColor,
