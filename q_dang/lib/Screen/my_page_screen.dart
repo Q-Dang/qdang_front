@@ -13,8 +13,8 @@ class MyPageScreen extends StatelessWidget {
       children: [
         MyProfile(name: '홍길동'),
         SizedBox(
-          child: Container(color: Color(0xFFD9D9D9)),
           height: 1,
+          child: Container(color: const Color(0xFFD9D9D9)),
         ),
         AbilityDistribution(name: '홍길동')
       ],
