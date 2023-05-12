@@ -9,7 +9,7 @@ class RecordCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Color mainColor = res.contains('승') ? kprimaryColor : ksecondaryColor;
+    final Color mainColor = res.contains('1') ? kprimaryColor : ksecondaryColor;
 
     return SizedBox(
       height: 150,
