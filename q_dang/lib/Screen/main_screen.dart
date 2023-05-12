@@ -14,7 +14,14 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  List<Widget> screens = <Widget>[const HomeScreen(), const MyPageScreen()];
+  List<Widget> screens = <Widget>[
+    HomeScreen(
+      name: "홍길동",
+    ),
+    MyPageScreen(
+      name: "홍길동",
+    )
+  ];
 
   int _selectedIndex = 0;
 

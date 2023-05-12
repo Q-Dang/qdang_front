@@ -3,7 +3,8 @@ import 'package:q_dang/Component/ability_distribution.dart';
 import 'package:q_dang/Component/my_profile.dart';
 
 class MyPageScreen extends StatelessWidget {
-  const MyPageScreen({super.key});
+  final String name;
+  const MyPageScreen({super.key, required this.name});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +12,7 @@ class MyPageScreen extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        MyProfile(name: '홍길동'),
+        MyProfile(name: name),
         SizedBox(
           height: 1,
           child: Container(color: const Color(0xFFD9D9D9)),
