@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:q_dang/Constant/colors.dart';
+import 'package:q_dang/Utils/data_util.dart';
 
 class RecordCardTitle extends StatelessWidget {
   Color mainColor;
@@ -23,6 +25,21 @@ class RecordCardTitle extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(
+            width: 10,
+          ),
+          SizedBox(
+            width: 80,
+            height: 20,
+            child: Text(
+              DataUtil.DateTimetoString(DateTime.now()),
+              style: TextStyle(
+                color: ksecondaryColor,
+                fontSize: 10,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          )
         ],
       ),
     );

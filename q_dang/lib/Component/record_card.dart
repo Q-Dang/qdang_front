@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:q_dang/Component/record_card_title.dart';
+import 'package:q_dang/Component/record_layout.dart';
 import 'package:q_dang/Constant/colors.dart';
 
 class RecordCard extends StatelessWidget {
@@ -27,6 +28,9 @@ class RecordCard extends StatelessWidget {
             RecordCardTitle(
               mainColor: mainColor,
               res: res,
+            ),
+            Expanded(
+              child: RecordLayout(),
             ),
           ],
         ),
