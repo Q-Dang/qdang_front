@@ -4,7 +4,6 @@ import 'package:q_dang/Component/new_game_button.dart';
 import 'package:q_dang/Component/record_card.dart';
 import 'package:q_dang/Component/welcome.dart';
 import 'package:q_dang/Repository/record_repository.dart';
-import 'package:q_dang/Screen/new_game_screen.dart';
 import 'package:q_dang/Screen/new_game_setting_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -36,12 +35,12 @@ class _HomeScreenState extends State<HomeScreen> {
               future: fetchData(),
               builder: (context, snapshot) {
                 if (snapshot.hasError) {
-                  return Center(
+                  return const Center(
                     child: Text('에러가 발생하였습니다.'),
                   );
                 }
                 if (!snapshot.hasData) {
-                  return Center(
+                  return const Center(
                     child: CircularProgressIndicator(),
                   );
                 }
@@ -50,14 +49,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     Welcome(name: widget.name),
                     Expanded(
-                      child: SingleChildScrollView(
-                        child: Column(
-                          children: recordData
-                              .map((record) => RecordCard(res: record))
-                              .toList(),
-                        ),
-                      ),
-                    ),
+                        child: ListView.builder(
+                            itemCount: recordData.length,
+                            itemBuilder: (context, index) {
+                              return RecordCard(res: recordData[index]);
+                            })),
                     NewGameButton(onPressed: newGame),
                   ],
                 );
