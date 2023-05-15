@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:q_dang/Screen/main_screen.dart';
 
 void main() {
-  runApp(const MaterialApp(
+  runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
+    theme: ThemeData(
+      fontFamily: 'NotoKr',
+    ),
     home: MainScreen(),
   ));
 }

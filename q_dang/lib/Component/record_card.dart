@@ -3,34 +3,48 @@ import 'package:q_dang/Component/record_card_title.dart';
 import 'package:q_dang/Component/record_layout.dart';
 import 'package:q_dang/Constant/colors.dart';
 
-class RecordCard extends StatelessWidget {
+class RecordCard extends StatefulWidget {
   final String res;
+  final VoidCallback onDetailPressed;
 
-  const RecordCard({super.key, required this.res});
+  const RecordCard(
+      {super.key, required this.res, required this.onDetailPressed});
 
   @override
+  State<RecordCard> createState() => _RecordCardState();
+}
+
+class _RecordCardState extends State<RecordCard> {
+  @override
   Widget build(BuildContext context) {
-    final Color mainColor = res.contains('1') ? kprimaryColor : ksecondaryColor;
+    final Color mainColor =
+        widget.res.contains('1') ? kprimaryColor : kthirdColor;
+    final Color backgroundColor =
+        widget.res.contains('1') ? Colors.white : Color(0xFFECECEC);
 
     return SizedBox(
-      height: 150,
+      height: 117,
       child: Card(
-        margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+        color: backgroundColor,
+        margin: const EdgeInsets.symmetric(vertical: 5.5, horizontal: 20),
         shape: RoundedRectangleBorder(
           side: BorderSide(
             color: mainColor,
           ),
-          borderRadius: const BorderRadius.all(Radius.circular(16)),
+          borderRadius: const BorderRadius.all(Radius.circular(13)),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             RecordCardTitle(
               mainColor: mainColor,
-              res: res,
+              res: widget.res,
             ),
             Expanded(
-              child: RecordLayout(),
+              child: RecordLayout(
+                onDetailPressed: widget.onDetailPressed,
+                mainColor: mainColor,
+              ),
             ),
           ],
         ),

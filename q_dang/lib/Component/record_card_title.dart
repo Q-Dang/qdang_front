@@ -14,8 +14,8 @@ class RecordCardTitle extends StatelessWidget {
       child: Row(
         children: [
           SizedBox(
-            width: 80,
-            height: 20,
+            width: 83,
+            height: 21,
             child: Container(
               color: mainColor,
               child: Text(
@@ -26,16 +26,16 @@ class RecordCardTitle extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 10,
+            width: 4,
           ),
           SizedBox(
-            width: 80,
-            height: 20,
+            width: 56,
+            height: 13,
             child: Text(
               DataUtil.DateTimetoString(DateTime.now()),
               style: TextStyle(
                 color: ksecondaryColor,
-                fontSize: 10,
+                fontSize: 9,
                 fontWeight: FontWeight.w700,
               ),
             ),

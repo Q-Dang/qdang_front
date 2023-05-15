@@ -16,11 +16,11 @@ class NewGameButton extends StatelessWidget {
       ),
       onPressed: onPressed,
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10),
+        padding: const EdgeInsets.symmetric(vertical: 17, horizontal: 20),
         child: Container(
           decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16), color: kprimaryColor),
-          height: 70,
+              borderRadius: BorderRadius.circular(15), color: kprimaryColor),
+          height: 62,
           child: const Center(
             child: Text(
               '새로운 경기 시작하기',

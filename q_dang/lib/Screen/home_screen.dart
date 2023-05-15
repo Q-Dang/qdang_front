@@ -6,6 +6,8 @@ import 'package:q_dang/Component/welcome.dart';
 import 'package:q_dang/Repository/record_repository.dart';
 import 'package:q_dang/Screen/new_game_setting_screen.dart';
 
+import 'detail_record_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   final String name;
   const HomeScreen({super.key, required this.name});
@@ -52,7 +54,15 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: ListView.builder(
                             itemCount: recordData.length,
                             itemBuilder: (context, index) {
-                              return RecordCard(res: recordData[index]);
+                              return RecordCard(
+                                res: recordData[index],
+                                onDetailPressed: () {
+                                  Navigator.of(context).push(
+                                      MaterialPageRoute(builder: (context) {
+                                    return DetailRecordScreen(id: index);
+                                  }));
+                                },
+                              );
                             })),
                     NewGameButton(onPressed: newGame),
                   ],
