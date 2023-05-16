@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:q_dang/Component/detail_record_time.dart';
 import 'package:q_dang/Constant/colors.dart';
 import 'package:q_dang/Utils/data_util.dart';
 
 class RecordCardTitle extends StatelessWidget {
   Color mainColor;
   String res;
+  DateTime dateTime;
 
-  RecordCardTitle({super.key, required this.mainColor, required this.res});
+  RecordCardTitle(
+      {super.key,
+      required this.mainColor,
+      required this.res,
+      required this.dateTime});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -31,15 +38,10 @@ class RecordCardTitle extends StatelessWidget {
           SizedBox(
             width: 56,
             height: 13,
-            child: Text(
-              DataUtil.DateTimetoString(DateTime.now()),
-              style: TextStyle(
-                color: ksecondaryColor,
-                fontSize: 9,
-                fontWeight: FontWeight.w700,
-              ),
+            child: DetailRecordTime(
+              dateTime: dateTime,
             ),
-          )
+          ),
         ],
       ),
     );

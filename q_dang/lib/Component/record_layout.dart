@@ -13,7 +13,7 @@ class RecordLayout extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         SizedBox(
-          width: 100,
+          width: 80,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -27,18 +27,15 @@ class RecordLayout extends StatelessWidget {
         ),
         Expanded(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Expanded(
-                  child: Icon(
-                Icons.circle,
-                color: mainColor,
-              )),
-              Expanded(
-                  child: Text(
+              Icon(Icons.workspaces, color: mainColor, size: 40),
+              Text(
                 '3구',
+                textAlign: TextAlign.center,
                 style: TextStyle(color: mainColor),
-              )),
+              ),
             ],
           ),
         ),
