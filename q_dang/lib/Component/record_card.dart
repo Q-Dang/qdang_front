@@ -39,6 +39,7 @@ class _RecordCardState extends State<RecordCard> {
             RecordCardTitle(
               mainColor: mainColor,
               res: widget.res,
+              dateTime: DateTime.now(),
             ),
             Expanded(
               child: RecordLayout(
