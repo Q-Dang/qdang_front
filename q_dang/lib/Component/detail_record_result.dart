@@ -17,19 +17,19 @@ class DetailRecordResult extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 320,
+          height: 340,
           width: width,
           child: Stack(
             children: [
               Positioned(
-                top: 210,
+                top: 220,
                 child: _DetailResult(
                   mainColor: kthirdColor,
                   width: width,
                 ),
               ),
               Positioned(
-                top: 105,
+                top: 110,
                 child: _DetailResult(
                   mainColor: kthirdColor,
                   width: width,
@@ -57,7 +57,7 @@ class _DetailResult extends StatelessWidget {
   Widget build(BuildContext context) {
     width -= 32;
     return Container(
-      height: 110,
+      height: 120,
       width: width,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),

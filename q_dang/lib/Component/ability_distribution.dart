@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:q_dang/Component/ability_graph.dart';
 import 'package:q_dang/Constant/colors.dart';
 
 class AbilityDistribution extends StatelessWidget {
@@ -53,12 +54,18 @@ class AbilityDistribution extends StatelessWidget {
           ),
           Container(
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: const Color(0xFFE8E8E8))),
-            child: const SizedBox(
-                height: 100,
-                width: 100,
-                child: Center(child: Text("분포도 들어갈 자리"))),
+                borderRadius: BorderRadius.circular(13),
+                color: Colors.white,
+                border: Border.all(color: const Color(0xFFE8E8E8)),
+                 boxShadow: [
+                  BoxShadow(
+                    color: Color(0xFF787878), 
+                    offset: Offset(0, 0), 
+                    blurRadius: 8.0
+                    )
+                ]
+                ),
+            child: AbilityGraph(),
           )
         ],
       ),

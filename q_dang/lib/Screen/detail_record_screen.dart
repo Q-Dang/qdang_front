@@ -6,6 +6,8 @@ import 'package:q_dang/Component/detail_record_score_graph.dart';
 import 'package:q_dang/Component/detail_record_summary.dart';
 import 'package:q_dang/Constant/colors.dart';
 
+import '../Component/detail_record_ability_graph.dart';
+
 class DetailRecordScreen extends StatelessWidget {
   final int id;
   DetailRecordScreen({super.key, required this.id});
@@ -27,6 +29,7 @@ class DetailRecordScreen extends StatelessWidget {
                 ),
                 DetailRecordResult(),
                 DetailRecordScoreGraph(),
+                DetailRecordAbilityGraph(),
               ],
             ),
           ),
