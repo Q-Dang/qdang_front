@@ -5,8 +5,6 @@ import '../Model/record_model.dart';
 
 class RecordRepository {
   static Future<List<String>> fetchData() async {
-    await Future.delayed(Duration(seconds: 2));
-
     return ["#1", "#2", "#3", "#2", "#1"];
   }
   // static Future<List<Record>> fetchData(int recordId) async {

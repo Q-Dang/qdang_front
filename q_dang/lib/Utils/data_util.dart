@@ -1,4 +1,14 @@
 class DataUtil {
+  static String DateTimetoStringDate(DateTime dateTime) {
+    String res = "";
+    res += dateTime.year.toString();
+    res += "/";
+    res += getTimeFormat(dateTime.month);
+    res += "/";
+    res += getTimeFormat(dateTime.day);
+    return res;
+  }
+
   static String DateTimetoString(DateTime dateTime) {
     String res = "";
     if (dateTime.hour > 12) {
