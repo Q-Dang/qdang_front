@@ -12,17 +12,16 @@ class RecordLayout extends StatelessWidget {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        SizedBox(
-          width: 80,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Expanded(
-                  child: Icon(
-                Icons.circle,
-                color: mainColor,
-              )),
-            ],
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Container(
+            width: 50,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              image: DecorationImage(
+                image: AssetImage('asset/img/default_profile.png'),
+              ),
+            ),
           ),
         ),
         Expanded(
@@ -40,7 +39,7 @@ class RecordLayout extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.fromLTRB(14, 0, 14, 8),
+          padding: const EdgeInsets.fromLTRB(20, 0, 14, 8),
           child: SizedBox(
             width: 1,
             child: Container(color: const Color(0xFFD9D9D9)),

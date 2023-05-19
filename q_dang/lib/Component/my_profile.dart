@@ -12,10 +12,19 @@ class MyProfile extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
       child: Row(
         children: [
-          Image.asset(
-            'asset/img/logo.png',
-            height: 50,
-            width: 50,
+          Padding(
+            padding: const EdgeInsets.only(right: 20),
+            child: Container(
+              width: 50,
+              height: 50,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                image: DecorationImage(
+                  image: AssetImage('asset/img/default_profile.png'),
+                ),
+              ),
+              child: Text(''),
+            ),
           ),
           Expanded(
             child: Column(
