@@ -15,10 +15,10 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   List<Widget> screens = <Widget>[
-    HomeScreen(
+    const HomeScreen(
       name: "홍길동",
     ),
-    MyPageScreen(
+    const MyPageScreen(
       name: "홍길동",
     )
   ];

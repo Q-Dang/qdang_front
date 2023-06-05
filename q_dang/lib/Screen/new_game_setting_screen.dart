@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:q_dang/Constant/colors.dart';
 import 'package:q_dang/Screen/new_game_screen.dart';
 
 class NewGameSettingScreen extends StatefulWidget {
@@ -22,7 +23,7 @@ class _NewGameSettingScreenState extends State<NewGameSettingScreen> {
           onPressed: () {
             setState(() {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return const NewGameScreen();
+                return NewGameScreen();
               }));
             });
           },
